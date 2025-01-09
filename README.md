@@ -7,7 +7,7 @@ A personal digital garden and blog built with modern web technologies.
 - **Framework**: [Next.js](https://nextjs.org/)
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
 - **Content**: [MDX](https://mdxjs.com/) (Markdown + JSX)
-- **Styling**: CSS Modules
+- **Styling**: TailwindCSS
 
 ## 📚 Features
 
