@@ -1,4 +1,4 @@
-import { getNowContent } from "app/blog/utils";
+import { getNowContent } from "app/garden/utils";
 import { CustomMDX } from "app/components/mdx";
 import { cn } from "app/utils/cn";
 import { Noto_Sans } from "next/font/google";

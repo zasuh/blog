@@ -4,9 +4,12 @@ const navItems = {
   "/": {
     name: "Home",
   },
-  // "/blog": {
-  //   name: "Writing",
-  // },
+  "/about": {
+    name: "About",
+  },
+  "/garden": {
+    name: "Garden",
+  },
   "/now": {
     name: "Now",
   },

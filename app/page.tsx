@@ -18,9 +18,9 @@ export default function Page() {
         Žane's Digital Garden
       </h1>
       <p className="mb-4">
-        {`I'm a web developer with 5+ YOE from Ljubljana, Slovenia with a focus on the frontend.`}
+        Full stack developer with 5+ YOE living in Ljubljana, Slovenia.
       </p>
-      <p className="mb-4">{`contact: suhadolnik@proton.me`}</p>
+      <p className="mb-4">contact: suhadolnik@proton.me</p>
     </section>
   );
 }
