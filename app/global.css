@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-avocado-100: #fff0dc;
-  --color-avocado-200: #f0bb78;
-  --color-avocado-300: #543a14;
-  --color-avocado-400: #131010;
+  --color-avocado-100: #100418;
+  --color-avocado-200: #5a4252;
+  --color-avocado-300: #0d0107;
+  --color-avocado-400: #a79494;
+  --color-avocado-500: #0e213a;
 }
 
 ::selection {
-  background-color: #47a3f3;
+  background-color: #5a4252;
   color: #fefefe;
 }
 
@@ -91,7 +92,7 @@ html {
 }
 
 .prose p {
-  @apply my-4 text-neutral-800;
+  @apply my-4 text-white;
 }
 
 .prose h1 {

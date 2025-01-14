@@ -1,4 +1,9 @@
+import { cn } from "app/utils/cn";
+import { Noto_Sans } from "next/font/google";
 import Link from "next/link";
+
+import localFont from "next/font/local";
+const CloisterBlack = localFont({ src: "../CloisterBlack.ttf" });
 
 const navItems = {
   "/": {
@@ -7,9 +12,9 @@ const navItems = {
   "/about": {
     name: "About",
   },
-  "/garden": {
-    name: "Garden",
-  },
+  // "/garden": {
+  //   name: "Garden",
+  // },
   "/now": {
     name: "Now",
   },
@@ -17,13 +22,21 @@ const navItems = {
 
 export function Navbar() {
   return (
-    <aside className="mb-8 tracking-tight">
-      <div className="lg:sticky lg:top-20 bg-white border-2 border-black rounded-md shadow-sm shadow-black">
+    <div className="flex flex-col items-center">
+      <h1
+        className={cn(
+          "mb-8 text-6xl font-semibold tracking-tighter text-white",
+          CloisterBlack.className
+        )}
+      >
+        Žane's Digital Garden
+      </h1>
+      <aside className="mb-8 tracking-tight">
         <nav
           className="flex flex-row items-start relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
           id="nav"
         >
-          <div className="flex flex-row space-x-0 pr-10">
+          <div className="flex flex-row space-x-0">
             {Object.entries(navItems).map(([path, { name }]) => {
               return (
                 <Link
@@ -37,7 +50,7 @@ export function Navbar() {
             })}
           </div>
         </nav>
-      </div>
-    </aside>
+      </aside>
+    </div>
   );
 }
