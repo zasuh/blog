@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Flourish from "../public/Flourish-1-flipped.png";
+
 function ArrowIcon() {
   return (
     <svg
@@ -17,32 +20,35 @@ function ArrowIcon() {
 
 export default function Footer() {
   return (
-    <footer className="flex items-center justify-between w-full mb-16">
-      <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-avocado-400 md:flex-row md:space-x-4 md:space-y-0">
-        <li>
-          <a
-            className="flex items-center transition-all hover:underline"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://www.linkedin.com/in/zasuhadolnik/"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-7">linkedin</p>
-          </a>
-        </li>
-        <li>
-          <a
-            className="flex items-center transition-all hover:underline"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://github.com/zasuh"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-7">github</p>
-          </a>
-        </li>
-      </ul>
-      <p className="mt-8 text-avocado-400">© {new Date().getFullYear()}</p>
+    <footer className="flex flex-col items-center justify-center w-full my-16">
+      <Image src={Flourish} width={200} height={200} alt="Flourished" />
+      <div className="flex items-center justify-between w-full">
+        <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-avocado-400 md:flex-row md:space-x-4 md:space-y-0">
+          <li>
+            <a
+              className="flex items-center transition-all hover:underline"
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://www.linkedin.com/in/zasuhadolnik/"
+            >
+              <ArrowIcon />
+              <p className="ml-2 h-7">linkedin</p>
+            </a>
+          </li>
+          <li>
+            <a
+              className="flex items-center transition-all hover:underline"
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://github.com/zasuh"
+            >
+              <ArrowIcon />
+              <p className="ml-2 h-7">github</p>
+            </a>
+          </li>
+        </ul>
+        <p className="mt-8 text-avocado-400">© {new Date().getFullYear()}</p>
+      </div>
     </footer>
   );
 }

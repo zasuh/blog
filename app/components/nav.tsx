@@ -3,7 +3,7 @@ import { Noto_Sans } from "next/font/google";
 import Link from "next/link";
 
 import localFont from "next/font/local";
-const CloisterBlack = localFont({ src: "../CloisterBlack.ttf" });
+const CloisterBlack = localFont({ src: "../public/CloisterBlack.ttf" });
 
 const navItems = {
   "/": {
@@ -12,9 +12,9 @@ const navItems = {
   "/about": {
     name: "About",
   },
-  // "/garden": {
-  //   name: "Garden",
-  // },
+  "/garden": {
+    name: "Garden",
+  },
   "/now": {
     name: "Now",
   },

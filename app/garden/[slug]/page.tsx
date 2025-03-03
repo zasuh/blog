@@ -58,6 +58,14 @@ export default function Blog({ params }) {
     notFound();
   }
 
+  const format = (date) => {
+    return new Intl.DateTimeFormat("en-GB", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    }).format(new Date(date));
+  };
+
   return (
     <section>
       <script
@@ -87,7 +95,7 @@ export default function Blog({ params }) {
       </h1>
       <div className="flex justify-between items-center mt-2 mb-8 text-sm">
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
-          {formatDate(post.metadata.publishedAt)}
+          {format(post.metadata.publishedAt)}
         </p>
       </div>
       <article className="prose">

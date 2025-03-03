@@ -1,11 +1,11 @@
+import Image from "next/image";
+
 export default function Page() {
   return (
     <section>
       <article className="mb-4 prose">
-        <p className="mb-4 ">
-          Full stack developer with 5+ YOE living in Ljubljana, Slovenia.
-        </p>
-        <p className="mb-4 ">contact: suhadolnik@proton.me</p>
+        <h2>Hello & welcome to my little corner of the internet.</h2>
+        <p>Not much is here right now, but I'm working on it.</p>
       </article>
     </section>
   );
