@@ -3,14 +3,20 @@ export const metadata = {
   description: "About Žane",
 };
 
+import AboutIcon from "../icons/about.svg";
+import Image from "next/image";
+
 export default function Page() {
   return (
     <section>
       <article className="flex flex-col prose">
-        <p>
-          I started learning web development in 2014 when I was studying
-          economics and saw that I really wasn't interested in it.
-        </p>
+        <div className="flex items-center gap-4">
+          <Image src={AboutIcon} width={80} height={80} alt="About" />
+          <p>
+            I started learning web development in 2014 when I was studying
+            economics and saw that I really wasn't interested in it.
+          </p>
+        </div>
         <p>
           Over the next 4 years I was self learning about everything
           HTML/CSS/JAVASCRIPT while working in IT and going to school in the

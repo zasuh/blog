@@ -1,17 +1,12 @@
 import { getNowContent } from "app/garden/utils";
 import { CustomMDX } from "app/components/mdx";
-import { cn } from "app/utils/cn";
-import { Noto_Sans } from "next/font/google";
+import NowIcon from "../icons/now.svg";
+import Image from "next/image";
 
 export const metadata = {
   title: "Now",
   description: "What I'm currently doing.",
 };
-
-const noto = Noto_Sans({
-  subsets: ["latin"],
-  display: "swap",
-});
 
 export async function generateStaticParams() {
   let content = getNowContent();
@@ -25,8 +20,9 @@ export default function Page({ params }) {
   let post = getNowContent();
 
   return (
-    <section>
-      <article className="mb-4 prose">
+    <section className="flex items-start gap-8 my-5">
+      <Image src={NowIcon} width={80} height={80} alt="Now" />
+      <article className="flex flex-col prose [&>:first-child]:!mt-0">
         <CustomMDX source={post[0].content} />
       </article>
     </section>

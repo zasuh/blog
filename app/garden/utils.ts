@@ -57,10 +57,10 @@ export function getNowContent() {
   return getMDXData(path.join(process.cwd(), "app", "now"));
 }
 
-export function formatDate(date: string, includeRelative = false) {
+export function formatDate(date: string) {
   return new Intl.DateTimeFormat("en-GB", {
     year: "numeric",
-    month: "long",
+    month: "short",
     day: "numeric",
   }).format(new Date(date));
 }
