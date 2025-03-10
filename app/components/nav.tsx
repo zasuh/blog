@@ -1,5 +1,4 @@
 import { cn } from "app/utils/cn";
-import { Noto_Sans } from "next/font/google";
 import Link from "next/link";
 
 import localFont from "next/font/local";
