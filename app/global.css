@@ -84,7 +84,7 @@ html {
 }
 
 .prose p {
-  @apply my-4 text-black text-md;
+  @apply my-4 text-black;
 }
 
 .prose h1 {
