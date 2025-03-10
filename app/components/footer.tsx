@@ -1,5 +1,8 @@
 import Image from "next/image";
 import Flourish from "../public/Flourish-1-flipped.png";
+import { cn } from "app/utils/cn";
+import localFont from "next/font/local";
+const CloisterBlack = localFont({ src: "../public/CloisterBlack.ttf" });
 
 function ArrowIcon() {
   return (
@@ -20,8 +23,14 @@ function ArrowIcon() {
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col items-center justify-center w-full my-16">
-      <Image src={Flourish} width={200} height={200} alt="Flourished" />
+    <footer className="flex flex-col items-center justify-center w-full mt-8 p-4">
+      <Image
+        src={Flourish}
+        width={200}
+        height={200}
+        alt="Flourished"
+        className="invert"
+      />
       <div className="flex items-center justify-between w-full">
         <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-avocado-400 md:flex-row md:space-x-4 md:space-y-0">
           <li>
@@ -31,8 +40,9 @@ export default function Footer() {
               target="_blank"
               href="https://www.linkedin.com/in/zasuhadolnik/"
             >
-              <ArrowIcon />
-              <p className="ml-2 h-7">linkedin</p>
+              <p className={cn("ml-2 h-7", CloisterBlack.className)}>
+                linkedin
+              </p>
             </a>
           </li>
           <li>
@@ -42,12 +52,13 @@ export default function Footer() {
               target="_blank"
               href="https://github.com/zasuh"
             >
-              <ArrowIcon />
-              <p className="ml-2 h-7">github</p>
+              <p className={cn("ml-2 h-7", CloisterBlack.className)}>github</p>
             </a>
           </li>
         </ul>
-        <p className="mt-8 text-avocado-400">© {new Date().getFullYear()}</p>
+        <p className={cn("mt-8 text-avocado-400", CloisterBlack.className)}>
+          © {new Date().getFullYear()}
+        </p>
       </div>
     </footer>
   );

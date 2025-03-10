@@ -6,9 +6,6 @@ import localFont from "next/font/local";
 const CloisterBlack = localFont({ src: "../public/CloisterBlack.ttf" });
 
 const navItems = {
-  "/": {
-    name: "Home",
-  },
   "/about": {
     name: "About",
   },
@@ -18,20 +15,21 @@ const navItems = {
   "/now": {
     name: "Now",
   },
+  "/blogroll": {
+    name: "Blogroll",
+  },
 };
 
 export function Navbar() {
   return (
-    <div className="flex flex-col items-center">
-      <h1
-        className={cn(
-          "mb-8 text-6xl font-semibold tracking-tighter text-white",
-          CloisterBlack.className
-        )}
+    <div className="flex items-center justify-between p-4 border-y border-black">
+      <Link
+        href="/"
+        className={cn(CloisterBlack.className, "text-2xl text-black")}
       >
         Žane's Digital Garden
-      </h1>
-      <aside className="mb-8 tracking-tight">
+      </Link>
+      <aside className="tracking-tight">
         <nav
           className="flex flex-row items-start relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
           id="nav"
@@ -42,7 +40,10 @@ export function Navbar() {
                 <Link
                   key={path}
                   href={path}
-                  className="transition-all flex align-middle relative py-1 px-2 m-1 hover:underline"
+                  className={cn(
+                    "transition-all flex align-middle relative py-1 px-2 text-lg hover:underline",
+                    CloisterBlack.className
+                  )}
                 >
                   {name}
                 </Link>

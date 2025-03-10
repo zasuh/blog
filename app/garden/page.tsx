@@ -1,6 +1,7 @@
 import { GardenPosts } from "app/components/posts";
-import GardenIcon from "../icons/garden.svg";
-import Image from "next/image";
+import localFont from "next/font/local";
+import { cn } from "app/utils/cn";
+const CloisterBlack = localFont({ src: "../public/CloisterBlack.ttf" });
 
 export const metadata = {
   title: "Garden",
@@ -9,11 +10,9 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <section>
-      <div className="flex items-center gap-8 my-5">
-        <Image src={GardenIcon} width={80} height={80} alt="Garden" />
-        <GardenPosts />
-      </div>
+    <section className="px-16">
+      <h1 className={cn(CloisterBlack.className, "text-4xl my-4")}>Garden</h1>
+      <GardenPosts />
     </section>
   );
 }

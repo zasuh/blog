@@ -1,16 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-avocado-100: #100418;
-  --color-avocado-200: #5a4252;
-  --color-avocado-300: #0d0107;
-  --color-avocado-400: #a79494;
-  --color-avocado-500: #0e213a;
-}
-
-::selection {
-  background-color: #5a4252;
-  color: #fefefe;
+  --color-blog-background: #f3efe4;
 }
 
 :root {
@@ -92,23 +83,23 @@ html {
 }
 
 .prose p {
-  @apply my-4 text-white;
+  @apply my-1 text-black;
 }
 
 .prose h1 {
-  @apply text-4xl font-medium tracking-tight mt-6 mb-2;
+  @apply text-4xl font-medium tracking-tight mt-4 mb-1;
 }
 
 .prose h2 {
-  @apply text-xl font-medium tracking-tight mt-6 mb-2;
+  @apply text-xl font-medium tracking-tight mt-4 mb-1;
 }
 
 .prose h3 {
-  @apply text-xl font-medium tracking-tight mt-6 mb-2;
+  @apply text-xl font-medium tracking-tight mt-4 mb-1;
 }
 
 .prose h4 {
-  @apply text-lg font-medium tracking-tight mt-6 mb-2;
+  @apply text-lg font-medium tracking-tight mt-4 mb-1;
 }
 
 .prose strong {

@@ -1,7 +1,8 @@
 import { getNowContent } from "app/garden/utils";
 import { CustomMDX } from "app/components/mdx";
-import NowIcon from "../icons/now.svg";
-import Image from "next/image";
+import localFont from "next/font/local";
+import { cn } from "app/utils/cn";
+const CloisterBlack = localFont({ src: "../public/CloisterBlack.ttf" });
 
 export const metadata = {
   title: "Now",
@@ -20,9 +21,9 @@ export default function Page({ params }) {
   let post = getNowContent();
 
   return (
-    <section className="flex items-start gap-8 my-5">
-      <Image src={NowIcon} width={80} height={80} alt="Now" />
-      <article className="flex flex-col prose [&>:first-child]:!mt-0">
+    <section className="px-16">
+      <h1 className={cn(CloisterBlack.className, "text-4xl my-4")}>Now</h1>
+      <article className="flex flex-col prose [&>:first-child]:!mt-0 [&>:first-child]:!mb-0">
         <CustomMDX source={post[0].content} />
       </article>
     </section>
