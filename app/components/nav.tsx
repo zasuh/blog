@@ -15,17 +15,20 @@ const navItems = {
   "/now": {
     name: "Now",
   },
-  "/blogroll": {
+  "/": {
     name: "Blogroll",
   },
 };
 
 export function Navbar() {
   return (
-    <div className="flex items-center justify-between p-4 border-y border-black">
+    <div className="flex flex-col md:flex-row items-center justify-between p-4 border-y border-b w-full">
       <Link
         href="/"
-        className={cn(CloisterBlack.className, "text-2xl text-black")}
+        className={cn(
+          CloisterBlack.className,
+          "text-3xl md:text-2xl text-black"
+        )}
       >
         Žane's Digital Garden
       </Link>

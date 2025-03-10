@@ -29,6 +29,7 @@
 }
 
 html {
+  font-family: "EB Garamond", serif;
   min-width: 360px;
 }
 
@@ -83,7 +84,7 @@ html {
 }
 
 .prose p {
-  @apply my-1 text-black;
+  @apply my-4 text-black text-md;
 }
 
 .prose h1 {
@@ -107,17 +108,11 @@ html {
 }
 
 .prose ul {
-  @apply list-disc pl-6;
+  @apply list-disc pl-6 mb-4;
 }
 
 .prose ol {
-  @apply list-decimal pl-6;
-}
-
-.prose > :first-child {
-  /* Override removing top margin, causing layout shift */
-  margin-top: 1.25em !important;
-  margin-bottom: 1.25em !important;
+  @apply list-decimal pl-6 mb-4;
 }
 
 pre::-webkit-scrollbar {

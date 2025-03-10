@@ -43,8 +43,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={cx("text-black bg-blog-background")}>
-      <body className="antialiased max-w-4xl mx-4 lg:mx-auto">
-        <main className="flex-auto min-w-0 flex flex-col px-2 md:px-0 border-x border-b border-black">
+      <body className="antialiased max-w-4xl mx-4 my-4 lg:mx-auto">
+        <main className="flex-auto min-w-0 flex flex-col px-0 border-x border-b border-black">
           <Navbar />
           {children}
           <Footer />

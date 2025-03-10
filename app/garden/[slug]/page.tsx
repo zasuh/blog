@@ -2,6 +2,9 @@ import { notFound } from "next/navigation";
 import { CustomMDX } from "app/components/mdx";
 import { formatDate, getBlogPosts } from "app/garden/utils";
 import { baseUrl } from "app/sitemap";
+import { cn } from "app/utils/cn";
+import localFont from "next/font/local";
+const CloisterBlack = localFont({ src: "../../public/CloisterBlack.ttf" });
 
 export async function generateStaticParams() {
   let posts = getBlogPosts();
@@ -67,7 +70,7 @@ export default function Blog({ params }) {
   };
 
   return (
-    <section className="px-16 py-4">
+    <section className="px-4 md:px-16 py-4">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -90,11 +93,16 @@ export default function Blog({ params }) {
           }),
         }}
       />
-      <h1 className="title font-semibold text-2xl tracking-tighter">
+      <h1
+        className={cn(
+          CloisterBlack.className,
+          "title text-2xl tracking-tighter"
+        )}
+      >
         {post.metadata.title}
       </h1>
       <div className="flex justify-between items-center mt-2 mb-8 text-sm">
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
+        <p className="text-md text-black">
           {format(post.metadata.publishedAt)}
         </p>
       </div>

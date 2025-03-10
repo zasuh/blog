@@ -9,8 +9,15 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <section className="px-16">
-      <h1 className={cn(CloisterBlack.className, "text-4xl my-4")}>About</h1>
+    <section className="px-4 md:px-16">
+      <h1
+        className={cn(
+          CloisterBlack.className,
+          "text-4xl my-4 text-center md:text-left"
+        )}
+      >
+        About
+      </h1>
       <article className="flex flex-col items-center">
         <div>
           <p>

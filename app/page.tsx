@@ -12,7 +12,7 @@ export default function Page() {
         <Image src={Wizard} alt="logo" width={700} height={700} />
       </div>
       <article className="grid grid-cols-1 lg:grid-cols-2 border-t border-b">
-        <Link href="/about" className="border-r border-b p-4">
+        <Link href="/about" className="lg:border-r border-b p-4">
           <h1 className={cn(CloisterBlack.className, "text-4xl")}>About</h1>
           <p>Who is writing for this site, who made it etc.</p>
         </Link>
@@ -20,7 +20,7 @@ export default function Page() {
           <h2 className={cn(CloisterBlack.className, "text-4xl")}>Garden</h2>
           <p>Plots of notes and thoughts on various topics.</p>
         </Link>
-        <Link href="/now" className=" border-r p-4">
+        <Link href="/now" className="border-b lg:border-b-0 lg:border-r p-4">
           <h2 className={cn(CloisterBlack.className, "text-4xl")}>Now</h2>
           <p>What I&apos;m doing currently.</p>
         </Link>

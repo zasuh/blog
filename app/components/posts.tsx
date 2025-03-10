@@ -21,8 +21,8 @@ export function GardenPosts() {
             className="flex flex-col space-y-1 mb-4"
             href={`/garden/${post.slug}`}
           >
-            <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2 md:items-center md:justify-between">
-              <p className="text-neutral-900 tracking-tight">
+            <div className="w-full flex space-x-0 items-center justify-between">
+              <p className="text-neutral-900 tracking-tight text-lg">
                 {post.metadata.title}
               </p>
               <p className="text-neutral-600  w-[150px] tabular-nums text-right">

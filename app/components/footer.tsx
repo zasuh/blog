@@ -31,8 +31,8 @@ export default function Footer() {
         alt="Flourished"
         className="invert"
       />
-      <div className="flex items-center justify-between w-full">
-        <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-avocado-400 md:flex-row md:space-x-4 md:space-y-0">
+      <div className="flex flex-col md:flex-row items-center justify-between w-full">
+        <ul className="text-xl md:text-md mt-8 flex flex-col space-x-0 space-y-2 text-avocado-400 md:flex-row md:space-x-4 md:space-y-0">
           <li>
             <a
               className="flex items-center transition-all hover:underline"
