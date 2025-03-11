@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Flourish from "../public/flourish.png";
 import { cn } from "app/utils/cn";
 import localFont from "next/font/local";
 const CloisterBlack = localFont({ src: "../public/CloisterBlack.ttf" });
@@ -7,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="flex flex-col items-center justify-center w-full mt-8 p-4">
       <Image
-        src="../public/flourish.png"
+        src={Flourish}
         width={200}
         height={200}
         alt="Flourished"
@@ -35,6 +36,18 @@ export default function Footer() {
               href="https://github.com/zasuh"
             >
               <p className={cn("ml-2 h-7", CloisterBlack.className)}>github</p>
+            </a>
+          </li>
+          <li>
+            <a
+              className="flex items-center transition-all hover:underline"
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://mastodon.social/@znsh"
+            >
+              <p className={cn("ml-2 h-7", CloisterBlack.className)}>
+                mastodon
+              </p>
             </a>
           </li>
         </ul>
