@@ -1,35 +1,35 @@
 import { cn } from "app/utils/cn";
 import Link from "next/link";
+import { Be_Vietnam_Pro } from "next/font/google";
 
-import localFont from "next/font/local";
-const CloisterBlack = localFont({ src: "../public/CloisterBlack.ttf" });
+const BeVietnamPro = Be_Vietnam_Pro({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+});
 
 const navItems = {
   "/about": {
-    name: "About",
+    name: "about",
   },
   "/garden": {
-    name: "Garden",
+    name: "garden",
   },
   "/now": {
-    name: "Now",
+    name: "now",
   },
-  "/": {
-    name: "Blogroll",
+  "/blogroll": {
+    name: "blogroll",
+  },
+  "/links": {
+    name: "links",
   },
 };
 
 export function Navbar() {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between p-4 border-y border-b w-full">
-      <Link
-        href="/"
-        className={cn(
-          CloisterBlack.className,
-          "text-3xl md:text-2xl text-black"
-        )}
-      >
-        Žane's Digital Garden
+    <div className="flex flex-col md:flex-row items-center justify-between p-4 border-y w-full">
+      <Link href="/" className={cn("text-3xl md:text-2xl")}>
+        znsh
       </Link>
       <aside className="tracking-tight">
         <nav
@@ -43,8 +43,7 @@ export function Navbar() {
                   key={path}
                   href={path}
                   className={cn(
-                    "transition-all flex align-middle relative py-1 px-2 text-lg hover:underline",
-                    CloisterBlack.className
+                    "transition-all flex align-middle relative py-1 px-2 text-lg hover:underline"
                   )}
                 >
                   {name}

@@ -1,7 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  --color-blog-background: #f3efe4;
+  --color-blog-background: #050f02;
+  --heading: #f47067;
+  --heading-secondary: #dd4949;
+  --subheading: #f6d05b;
+  --text-terniary: #f2b97c;
+  --text: white;
 }
 
 :root {
@@ -28,6 +33,41 @@
   }
 }
 
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-be-vietnam-pro);
+    color: var(--heading-secondary);
+  }
+
+  p {
+    font-family: var(--font-roboto-mono);
+  }
+
+  /* Add default styling for links */
+  a {
+    color: var(--text-terniary);
+    font-family: var(--font-roboto-mono);
+  }
+
+  ul {
+    font-family: var(--font-roboto-mono);
+  }
+
+  ol {
+    font-family: var(--font-roboto-mono);
+  }
+
+  /* This will affect all border colors by default */
+  * {
+    border-color: var(--text-terniary);
+  }
+}
+
 html {
   font-family: "EB Garamond", serif;
   min-width: 360px;
@@ -48,11 +88,11 @@ html {
 }
 
 .prose a {
-  @apply underline transition-all decoration-neutral-400 dark:decoration-neutral-600 underline-offset-2 decoration-[0.1em];
+  @apply underline transition-all decoration-neutral-400  underline-offset-2 decoration-[0.1em];
 }
 
 .prose .anchor:after {
-  @apply text-neutral-300 dark:text-neutral-700;
+  @apply text-neutral-300;
   content: "#";
 }
 
@@ -61,7 +101,7 @@ html {
 }
 
 .prose pre {
-  @apply bg-neutral-50 dark:bg-neutral-900 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-900 py-2 px-3 text-sm;
+  @apply bg-neutral-50 rounded-lg overflow-x-auto border border-neutral-200  py-2 px-3 text-sm;
 }
 
 .prose code {
@@ -84,7 +124,7 @@ html {
 }
 
 .prose p {
-  @apply my-4 text-black;
+  @apply my-4 text-white;
 }
 
 .prose h1 {

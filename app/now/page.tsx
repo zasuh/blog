@@ -1,8 +1,5 @@
 import { getNowContent } from "app/garden/utils";
 import { CustomMDX } from "app/components/mdx";
-import localFont from "next/font/local";
-import { cn } from "app/utils/cn";
-const CloisterBlack = localFont({ src: "../public/CloisterBlack.ttf" });
 
 export const metadata = {
   title: "Now",
@@ -17,12 +14,12 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function Page({ params }) {
+export default function Page() {
   let post = getNowContent();
 
   return (
-    <section className="px-16">
-      <h1 className={cn(CloisterBlack.className, "text-4xl my-4")}>Now</h1>
+    <section className="p-12">
+      <h1 className="text-6xl mb-8 text-center md:text-left">Now</h1>
       <article className="flex flex-col prose [&>:first-child]:!mt-0 [&>:first-child]:!mb-0">
         <CustomMDX source={post[0].content} />
       </article>

@@ -93,16 +93,11 @@ export default function Blog({ params }) {
           }),
         }}
       />
-      <h1
-        className={cn(
-          CloisterBlack.className,
-          "title text-2xl tracking-tighter"
-        )}
-      >
+      <h1 className={cn("title text-2xl tracking-tighter")}>
         {post.metadata.title}
       </h1>
       <div className="flex justify-between items-center mt-2 mb-8 text-sm">
-        <p className="text-black">{format(post.metadata.publishedAt)}</p>
+        <p className="text-subheading">{format(post.metadata.publishedAt)}</p>
       </div>
       <article className="prose">
         <CustomMDX source={post.content} />

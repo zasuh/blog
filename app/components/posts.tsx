@@ -22,10 +22,8 @@ export function GardenPosts() {
             href={`/garden/${post.slug}`}
           >
             <div className="w-full flex space-x-0 items-center justify-between">
-              <p className="text-neutral-900 tracking-tight text-lg">
-                {post.metadata.title}
-              </p>
-              <p className="text-neutral-600  w-[150px] tabular-nums text-right">
+              <p>{post.metadata.title}</p>
+              <p className="text-white w-[150px] text-right">
                 {formatDate(post.metadata.publishedAt)}
               </p>
             </div>

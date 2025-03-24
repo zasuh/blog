@@ -1,6 +1,15 @@
 import { cn } from "app/utils/cn";
-import localFont from "next/font/local";
-const CloisterBlack = localFont({ src: "../public/CloisterBlack.ttf" });
+import { Be_Vietnam_Pro, Roboto_Mono } from "next/font/google";
+
+const BeVietnamPro = Be_Vietnam_Pro({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+});
+
+const RobotoMono = Roboto_Mono({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "About Žane",
@@ -9,16 +18,18 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <section className="px-4 md:px-16">
+    <section className="p-12">
       <h1
         className={cn(
-          CloisterBlack.className,
-          "text-4xl my-4 text-center md:text-left"
+          BeVietnamPro.className,
+          "text-6xl mb-8 text-center md:text-left"
         )}
       >
         About
       </h1>
-      <article className="flex flex-col items-center">
+      <article
+        className={cn(RobotoMono.className, "flex flex-col items-center")}
+      >
         <div>
           <p>
             I started learning web development in 2014 when I was studying

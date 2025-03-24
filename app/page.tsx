@@ -1,33 +1,43 @@
-import localFont from "next/font/local";
-import { cn } from "./utils/cn";
 import Link from "next/link";
-import Image from "next/image";
-import Wizard from "./public/wizard.svg";
-const CloisterBlack = localFont({ src: "./public/CloisterBlack.ttf" });
+
+const ITEMS = [
+  {
+    title: "About",
+    description: "Who is writing for this site, who made it etc.",
+    href: "/about",
+  },
+  {
+    title: "Garden",
+    description: "Plots of notes and thoughts on various topics.",
+    href: "/garden",
+  },
+  {
+    title: "Now",
+    description: "What I'm doing currently.",
+    href: "/now",
+  },
+  {
+    title: "Blogroll",
+    description: "A collection of blogs I read.",
+    href: "/blogroll",
+  },
+  {
+    title: "Links",
+    description: "A collection of links to other sites.",
+    href: "/links",
+  },
+];
 
 export default function Page() {
   return (
-    <section>
-      <div className="flex justify-center">
-        <Image src={Wizard} alt="logo" width={700} height={700} />
-      </div>
-      <article className="grid grid-cols-1 lg:grid-cols-2 border-t border-b">
-        <Link href="/about" className="lg:border-r border-b p-4">
-          <h1 className={cn(CloisterBlack.className, "text-4xl")}>About</h1>
-          <p>Who is writing for this site, who made it etc.</p>
-        </Link>
-        <Link href="/garden" className="border-b p-4">
-          <h2 className={cn(CloisterBlack.className, "text-4xl")}>Garden</h2>
-          <p>Plots of notes and thoughts on various topics.</p>
-        </Link>
-        <Link href="/now" className="border-b lg:border-b-0 lg:border-r p-4">
-          <h2 className={cn(CloisterBlack.className, "text-4xl")}>Now</h2>
-          <p>What I&apos;m doing currently.</p>
-        </Link>
-        <Link href="/blogroll" className=" p-4">
-          <h2 className={cn(CloisterBlack.className, "text-4xl")}>Blogroll</h2>
-          <p>A collection of blogs I read.</p>
-        </Link>
+    <section className="p-12">
+      <article className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
+        {ITEMS.map((item) => (
+          <Link href={item.href} key={item.href}>
+            <h2 className="text-6xl mb-4 hover:underline">{item.title}</h2>
+            <p>{item.description}</p>
+          </Link>
+        ))}
       </article>
     </section>
   );

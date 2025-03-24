@@ -58,9 +58,9 @@ export function getNowContent() {
 }
 
 export function formatDate(date: string) {
-  return new Intl.DateTimeFormat("en-GB", {
+  return new Intl.DateTimeFormat("sl", {
     year: "numeric",
-    month: "short",
+    month: "numeric",
     day: "numeric",
   }).format(new Date(date));
 }
