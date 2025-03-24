@@ -70,7 +70,7 @@ export default function Blog({ params }) {
   };
 
   return (
-    <section className="px-4 md:px-16 py-4">
+    <section className="p-12">
       <script
         type="application/ld+json"
         suppressHydrationWarning
