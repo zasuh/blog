@@ -10,7 +10,7 @@ const BeVietnamPro = Be_Vietnam_Pro({
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col items-center justify-center w-full mt-8 p-4">
+    <footer className="flex flex-col items-center justify-center w-full mt-8 border-t p-2">
       <div className="flex flex-col md:flex-row items-center justify-between w-full">
         <ul className="text-xl md:text-md mt-8 flex flex-col space-x-0 space-y-2 text-avocado-400 md:flex-row md:space-x-4 md:space-y-0">
           <li>
@@ -45,7 +45,7 @@ export default function Footer() {
           </li>
         </ul>
         <p className={cn("mt-8 text-avocado-400", BeVietnamPro.className)}>
-          © {new Date().getFullYear()}
+          © znsh
         </p>
       </div>
     </footer>

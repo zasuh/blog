@@ -4,6 +4,7 @@ import { formatDate, getBlogPosts } from "app/garden/utils";
 import { baseUrl } from "app/sitemap";
 import { cn } from "app/utils/cn";
 import localFont from "next/font/local";
+import PageWrapper from "app/components/page-wrapper";
 const CloisterBlack = localFont({ src: "../../public/CloisterBlack.ttf" });
 
 export async function generateStaticParams() {
@@ -61,16 +62,8 @@ export default function Blog({ params }) {
     notFound();
   }
 
-  const format = (date) => {
-    return new Intl.DateTimeFormat("en-GB", {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    }).format(new Date(date));
-  };
-
   return (
-    <section className="p-12">
+    <PageWrapper>
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -88,20 +81,20 @@ export default function Blog({ params }) {
             url: `${baseUrl}/blog/${post.slug}`,
             author: {
               "@type": "Person",
-              name: "My Portfolio",
+              name: "Zane",
             },
           }),
         }}
       />
-      <h1 className={cn("title text-2xl tracking-tighter")}>
-        {post.metadata.title}
-      </h1>
+      <h1 className="title text-2xl tracking-tighter">{post.metadata.title}</h1>
       <div className="flex justify-between items-center mt-2 mb-8 text-sm">
-        <p className="text-subheading">{format(post.metadata.publishedAt)}</p>
+        <p className="text-subheading">
+          {formatDate(post.metadata.publishedAt)}
+        </p>
       </div>
       <article className="prose">
         <CustomMDX source={post.content} />
       </article>
-    </section>
+    </PageWrapper>
   );
 }

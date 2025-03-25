@@ -1,5 +1,6 @@
 import { getNowContent } from "app/garden/utils";
 import { CustomMDX } from "app/components/mdx";
+import PageWrapper from "app/components/page-wrapper";
 
 export const metadata = {
   title: "Now",
@@ -18,11 +19,10 @@ export default function Page() {
   let post = getNowContent();
 
   return (
-    <section className="p-12">
-      <h1 className="text-6xl mb-8 text-center md:text-left">Now</h1>
+    <PageWrapper title="Now">
       <article className="flex flex-col prose [&>:first-child]:!mt-0 [&>:first-child]:!mb-0">
         <CustomMDX source={post[0].content} />
       </article>
-    </section>
+    </PageWrapper>
   );
 }

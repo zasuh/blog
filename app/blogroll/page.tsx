@@ -1,3 +1,4 @@
+import PageWrapper from "app/components/page-wrapper";
 import Link from "next/link";
 
 const PUBLICATIONS = [
@@ -55,8 +56,7 @@ const PUBLICATIONS = [
 
 export default function Page() {
   return (
-    <section className="p-12">
-      <h1 className="text-6xl mb-8 text-center md:text-left">Blogroll</h1>
+    <PageWrapper title="Blogroll">
       <article className="flex flex-col">
         <p className="mb-8">
           Not just blogs, but publications I read on a regular basis.
@@ -65,6 +65,7 @@ export default function Page() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
           {PUBLICATIONS.map((publication) => (
             <Link
+              key={publication.name}
               href={publication.url}
               className="bg-blog-background-secondary p-4 rounded-lg"
             >
@@ -74,6 +75,6 @@ export default function Page() {
           ))}
         </div>
       </article>
-    </section>
+    </PageWrapper>
   );
 }

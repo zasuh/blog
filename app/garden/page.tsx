@@ -1,5 +1,5 @@
 import { GardenPosts } from "app/components/posts";
-import { cn } from "app/utils/cn";
+import PageWrapper from "app/components/page-wrapper";
 
 export const metadata = {
   title: "Garden",
@@ -8,9 +8,8 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <section className="p-12">
-      <h1 className={cn("text-6xl mb-8 text-center md:text-left")}>Garden</h1>
+    <PageWrapper title="Garden">
       <GardenPosts />
-    </section>
+    </PageWrapper>
   );
 }

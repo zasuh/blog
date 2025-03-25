@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import PageWrapper from "./components/page-wrapper";
 const ITEMS = [
   {
     title: "About",
@@ -30,15 +30,15 @@ const ITEMS = [
 
 export default function Page() {
   return (
-    <section className="p-12">
-      <article className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
+    <PageWrapper>
+      <div className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
         {ITEMS.map((item) => (
           <Link href={item.href} key={item.href}>
             <h2 className="text-6xl mb-4 hover:underline">{item.title}</h2>
             <p>{item.description}</p>
           </Link>
         ))}
-      </article>
-    </section>
+      </div>
+    </PageWrapper>
   );
 }

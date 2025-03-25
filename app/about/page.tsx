@@ -1,15 +1,5 @@
-import { cn } from "app/utils/cn";
-import { Be_Vietnam_Pro, Roboto_Mono } from "next/font/google";
-
-const BeVietnamPro = Be_Vietnam_Pro({
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
-});
-
-const RobotoMono = Roboto_Mono({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-});
+import PageWrapper from "app/components/page-wrapper";
+import Link from "next/link";
 
 export const metadata = {
   title: "About Žane",
@@ -18,19 +8,9 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <section className="p-12">
-      <h1
-        className={cn(
-          BeVietnamPro.className,
-          "text-6xl mb-8 text-center md:text-left"
-        )}
-      >
-        About
-      </h1>
-      <article
-        className={cn(RobotoMono.className, "flex flex-col items-center")}
-      >
-        <div>
+    <PageWrapper title="About">
+      <article className="flex flex-col items-center">
+        <div className="mb-8">
           <p>
             I started learning web development in 2014 when I was studying
             economics and saw that I really wasn't interested in it.
@@ -60,7 +40,21 @@ export default function Page() {
             me an email.
           </p>
         </div>
+        <div className="flex flex-col gap-8 items-center">
+          <a href="mailto:suhadolnik@proton.me" className="hover:underline">
+            suhadolnik@proton.me
+          </a>
+
+          <div className="flex items-center gap-8">
+            <Link href="/uses" className="underline">
+              Uses
+            </Link>
+            <Link href="/resume" className="underline">
+              Resume
+            </Link>
+          </div>
+        </div>
       </article>
-    </section>
+    </PageWrapper>
   );
 }
