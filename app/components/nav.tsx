@@ -27,7 +27,7 @@ const navItems = {
 
 export function Navbar() {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between p-4 border-y w-full">
+    <div className="flex flex-col md:flex-row items-center justify-between p-4 border-text-terniary border-y w-full">
       <Link href="/" className={cn("text-3xl md:text-2xl")}>
         znsh
       </Link>

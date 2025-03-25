@@ -10,7 +10,7 @@ const BeVietnamPro = Be_Vietnam_Pro({
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col items-center justify-center w-full mt-8 border-t p-2">
+    <footer className="flex flex-col items-center justify-center w-full mt-8 border-text-terniary border-t p-2">
       <div className="flex flex-col md:flex-row items-center justify-between w-full">
         <ul className="text-xl md:text-md mt-8 flex flex-col space-x-0 space-y-2 text-avocado-400 md:flex-row md:space-x-4 md:space-y-0">
           <li>

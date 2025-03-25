@@ -62,11 +62,6 @@
   ol {
     font-family: var(--font-roboto-mono);
   }
-
-  /* This will affect all border colors by default */
-  * {
-    border-color: var(--color-text-terniary);
-  }
 }
 
 html {
