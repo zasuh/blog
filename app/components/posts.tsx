@@ -25,7 +25,7 @@ export function GardenPosts() {
           >
             <div className="w-full flex items-center">
               <p className="min-w-fit">{post.metadata.title}</p>
-              <div className="mx-4 h-[1px] w-full border-b border-text-terniary"></div>
+              <div className="mx-4 h-[1px] w-full border-b border-terniary"></div>
               <p className="text-white min-w-[120px] text-right">
                 {formatDate(post.metadata.publishedAt)}
               </p>

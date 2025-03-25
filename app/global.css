@@ -6,7 +6,7 @@
   --color-heading: #f47067;
   --color-heading-secondary: #dd4949;
   --color-subheading: #f6d05b;
-  --color-text-terniary: #f2b97c;
+  --color-terniary: #f2b97c;
 }
 
 :root {
@@ -84,7 +84,7 @@ html {
 }
 
 .prose a {
-  @apply underline transition-all decoration-neutral-400  underline-offset-2 decoration-[0.1em];
+  @apply text-terniary underline transition-all decoration-neutral-400  underline-offset-2 decoration-[0.1em];
 }
 
 .prose .anchor:after {

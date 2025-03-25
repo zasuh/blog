@@ -15,13 +15,13 @@ export default function Page() {
             I started learning web development in 2014 when I was studying
             economics and saw that I really wasn't interested in it.
           </p>
-          <hr className="my-4 border-text-terniary" />
+          <br />
           <p>
             Over the next 4 years I was self learning about everything
             HTML/CSS/JAVASCRIPT while working in IT and going to school in the
             evenings.
           </p>
-          <hr className="my-4 border-text-terniary" />
+          <br />
           <p>
             In late 2018 I got my first developer job and have stayed in the
             industry since, working at multiple companies on different sectors
@@ -31,7 +31,7 @@ export default function Page() {
             running projects this has shaped my knowledge and skills ever
             evolving.
           </p>
-          <hr className="my-4 border-text-terniary" />
+          <br />
           <p>
             Mostly focusing on Front End development in React, I've recently
             been learning and moving to more full stack projects which I call
@@ -40,7 +40,7 @@ export default function Page() {
             me an email.
           </p>
         </div>
-        <div className="flex flex-col gap-8 items-center">
+        <div className="flex flex-col gap-8 items-center text-terniary">
           <a href="mailto:suhadolnik@proton.me" className="hover:underline">
             suhadolnik@proton.me
           </a>
