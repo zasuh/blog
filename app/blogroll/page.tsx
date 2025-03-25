@@ -1,6 +1,11 @@
 import PageWrapper from "app/components/page-wrapper";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Blogroll",
+  description: "A list of blogs I read on a regular basis.",
+};
+
 const PUBLICATIONS = [
   {
     name: "DenseDiscovery",

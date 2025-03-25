@@ -1,20 +1,22 @@
 import Link from "next/link";
 import { formatDate, getBlogPosts } from "app/garden/utils";
 
+const metadata = {
+  title: "Garden",
+  description: "My plot of notes and things.",
+};
+
 export function GardenPosts() {
   let allBlogs = getBlogPosts();
 
   return (
     <div>
       {allBlogs
-        .sort((a, b) => {
-          if (
-            new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)
-          ) {
-            return -1;
-          }
-          return 1;
-        })
+        .sort((a, b) =>
+          new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)
+            ? -1
+            : 1
+        )
         .map((post) => (
           <Link
             key={post.slug}
