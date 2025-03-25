@@ -35,6 +35,10 @@
 }
 
 @layer base {
+  body {
+    background-color: var(--color-blog-background);
+  }
+
   h1,
   h2,
   h3,
