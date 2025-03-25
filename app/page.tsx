@@ -21,11 +21,11 @@ const ITEMS = [
     description: "A collection of blogs I read.",
     href: "/blogroll",
   },
-  {
-    title: "Links",
-    description: "A collection of links to other sites.",
-    href: "/links",
-  },
+  // {
+  //   title: "Links",
+  //   description: "A collection of links to other sites.",
+  //   href: "/links",
+  // },
 ];
 
 export default function Page() {

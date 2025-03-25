@@ -20,9 +20,9 @@ const navItems = {
   "/blogroll": {
     name: "blogroll",
   },
-  "/links": {
-    name: "links",
-  },
+  // "/links": {
+  //   name: "links",
+  // },
 };
 
 export function Navbar() {
