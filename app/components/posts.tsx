@@ -18,12 +18,13 @@ export function GardenPosts() {
         .map((post) => (
           <Link
             key={post.slug}
-            className="flex flex-col space-y-1 mb-4"
+            className="flex flex-col space-y-1 mb-4 hover:rounded-md hover:px-2 hover:bg-white/10 transition-all"
             href={`/garden/${post.slug}`}
           >
-            <div className="w-full flex space-x-0 items-center justify-between">
-              <p>{post.metadata.title}</p>
-              <p className="text-white w-[150px] text-right">
+            <div className="w-full flex items-center">
+              <p className="min-w-fit">{post.metadata.title}</p>
+              <div className="mx-4 h-[1px] w-full border-b border-text-terniary"></div>
+              <p className="text-white min-w-[120px] text-right">
                 {formatDate(post.metadata.publishedAt)}
               </p>
             </div>
