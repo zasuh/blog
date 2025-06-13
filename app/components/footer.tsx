@@ -33,16 +33,6 @@ export default function Footer() {
               <p className={cn("ml-2 h-7", BeVietnamPro.className)}>github</p>
             </a>
           </li>
-          <li>
-            <a
-              className="flex items-center transition-all hover:underline text-terniary"
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://mastodon.social/@znsh"
-            >
-              <p className={cn("ml-2 h-7", BeVietnamPro.className)}>mastodon</p>
-            </a>
-          </li>
         </ul>
         <p className={cn("mt-8 text-avocado-400", BeVietnamPro.className)}>
           © znsh
