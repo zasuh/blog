@@ -105,7 +105,7 @@ export default function Page() {
                   </div>
                   <ul className="list-disc pl-4 space-y-2">
                     {job.responsibilities.map((responsibility, index) => (
-                      <li key={index} className="text-sm text-white">
+                      <li key={index} className="text-sm text-black">
                         {responsibility}
                       </li>
                     ))}
@@ -117,7 +117,7 @@ export default function Page() {
                       {job.skills.map((skill) => (
                         <span
                           key={skill}
-                          className="px-2 py-1 text-xs rounded-full border border-text-terniary text-text-terniary"
+                          className="px-2 py-1 text-xs rounded-full border border-black text-black"
                         >
                           {skill}
                         </span>

@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  --color-blog-background: #050f02;
-  --color-blog-background-secondary: #271c1a;
-  --color-heading: #f47067;
+  --color-blog-background: #f5eded;
+  --color-blog-background-secondary: #3e3636;
+  --color-heading: #d72323;
   --color-heading-secondary: #dd4949;
-  --color-subheading: #f6d05b;
-  --color-terniary: #f2b97c;
+  --color-subheading: #000000;
+  --color-terniary: #000000;
 }
 
 :root {
@@ -47,6 +47,7 @@
 
   p {
     font-family: var(--font-roboto-mono);
+    color: var(--color-subheading);
   }
 
   /* Add default styling for links */
@@ -88,7 +89,7 @@ html {
 }
 
 .prose .anchor:after {
-  @apply text-neutral-300;
+  @apply text-blog-background-secondary;
   content: "#";
 }
 
@@ -97,7 +98,7 @@ html {
 }
 
 .prose pre {
-  @apply bg-neutral-50 rounded-lg overflow-x-auto border border-neutral-200  py-2 px-3 text-sm;
+  @apply bg-blog-background-secondary rounded-lg overflow-x-auto border border-neutral-200  py-2 px-3 text-sm;
 }
 
 .prose code {

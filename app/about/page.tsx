@@ -13,13 +13,8 @@ export default function Page() {
         <div className="mb-8">
           <p>
             I started learning web development in 2014 when I was studying
-            economics and saw that I really wasn't interested in it.
-          </p>
-          <br />
-          <p>
-            Over the next 4 years I was self learning about everything
-            HTML/CSS/JAVASCRIPT while working in IT and going to school in the
-            evenings.
+            economics and saw that I really wasn't interested in it. Spent the
+            next 4 years self learning about web development.
           </p>
           <br />
           <p>
@@ -33,11 +28,9 @@ export default function Page() {
           </p>
           <br />
           <p>
-            Mostly focusing on Front End development in React, I've recently
-            been learning and moving to more full stack projects which I call
-            being a T shaped developer, knowing a lot about something and
-            something about a lot. If you want to get coffee in Ljubljana send
-            me an email.
+            Mostly focusing on front end, I've recently been learning and moving
+            to more full stack projects. If you want to get coffee in Ljubljana
+            send me an email.
           </p>
         </div>
         <div className="flex flex-col gap-8 items-center text-terniary">
