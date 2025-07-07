@@ -17,6 +17,7 @@ export function GardenPosts() {
             ? -1
             : 1
         )
+        .filter((post) => !post.metadata.draft)
         .map((post) => (
           <Link
             key={post.slug}
